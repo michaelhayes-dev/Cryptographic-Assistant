@@ -96,6 +96,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.buttonUpdatePlaintext = new System.Windows.Forms.Button();
             this.buttonAbout = new System.Windows.Forms.Button();
+            this.buttonPermute = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -743,11 +744,11 @@
             // buttonLoadFrequency
             // 
             this.buttonLoadFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLoadFrequency.Location = new System.Drawing.Point(939, 134);
+            this.buttonLoadFrequency.Location = new System.Drawing.Point(927, 134);
             this.buttonLoadFrequency.Name = "buttonLoadFrequency";
-            this.buttonLoadFrequency.Size = new System.Drawing.Size(241, 53);
+            this.buttonLoadFrequency.Size = new System.Drawing.Size(129, 53);
             this.buttonLoadFrequency.TabIndex = 14;
-            this.buttonLoadFrequency.Text = "Load Frequencies";
+            this.buttonLoadFrequency.Text = "Load";
             this.buttonLoadFrequency.UseVisualStyleBackColor = true;
             this.buttonLoadFrequency.Click += new System.EventHandler(this.buttonLoadFrequency_Click);
             // 
@@ -782,12 +783,24 @@
             this.buttonAbout.UseVisualStyleBackColor = true;
             this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
+            // buttonPermute
+            // 
+            this.buttonPermute.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPermute.Location = new System.Drawing.Point(1075, 134);
+            this.buttonPermute.Name = "buttonPermute";
+            this.buttonPermute.Size = new System.Drawing.Size(163, 53);
+            this.buttonPermute.TabIndex = 18;
+            this.buttonPermute.Text = "Permute";
+            this.buttonPermute.UseVisualStyleBackColor = true;
+            this.buttonPermute.Click += new System.EventHandler(this.buttonPermute_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1586, 1137);
+            this.Controls.Add(this.buttonPermute);
             this.Controls.Add(this.buttonAbout);
             this.Controls.Add(this.buttonUpdatePlaintext);
             this.Controls.Add(this.label30);
@@ -884,6 +897,7 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button buttonUpdatePlaintext;
         private System.Windows.Forms.Button buttonAbout;
+        private System.Windows.Forms.Button buttonPermute;
     }
 }
 

@@ -88,6 +88,27 @@ namespace Cryptographic_Assistant
             analyzeData(false);
         }
 
+        private void buttonPermute_Click(object sender, EventArgs e)
+        {
+            if (textBoxFrequency.Text == "")
+            {
+                MessageBox.Show("Nothing to Permute!");
+                return;
+            }
+            Random r = new Random();
+            char[] s = textBoxFrequency.Text.ToCharArray();
+            for(int i=0; i<26; i++)
+            {
+                int random1 = r.Next(0, 26);
+                int random2 = r.Next(0, 26);
+                char temp = s[random1];
+                s[random1] = s[random2];
+                s[random2] = temp;
+            }
+            string permuted = new string(s);
+            textBoxFrequency.Text = permuted;
+        }
+
         private void analyzeData(bool findFrequencies)
         {
             if(textBoxCiphertext.Text == "")
