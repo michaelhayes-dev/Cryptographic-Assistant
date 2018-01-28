@@ -74,8 +74,15 @@ namespace Cryptographic_Assistant
                 MessageBox.Show("No Ciphertext!");
                 return;
             }
+            //a list that contains each letter in ciphertext and its # of occurrences
+            //sorted by which occurs most frequently
             List<KeyValuePair<char, int>> l = parseCiphertext();
-            MessageBox.Show(l.ElementAt(0).ToString());
+
+            //an array list that specifies which frequency mapping we are using
+            ArrayList a = useEtaoin();
+
+            //TODO, move through frequency mapping and sorted ciphertext frequencies
+            //to determine the letter mapping
         }
 
         //function that counts the number of occurrences of letters in a given ciphertext
