@@ -107,6 +107,7 @@ namespace Cryptographic_Assistant
             }
             string permuted = new string(s);
             textBoxFrequency.Text = permuted;
+            analyzeData(true);
         }
 
         private void analyzeData(bool findFrequencies)
