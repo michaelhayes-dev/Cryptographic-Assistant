@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -14,7 +11,6 @@ namespace Cryptographic_Assistant
     public partial class Form1 : Form
     {
         
-
         public Form1()
         {
             InitializeComponent();
@@ -22,17 +18,16 @@ namespace Cryptographic_Assistant
 
         private void buttonLoadCiphertext_Click(object sender, EventArgs e)
         {
-            Stream s = null;
             OpenFileDialog d = new OpenFileDialog();
             d.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             if (d.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    if ((s = d.OpenFile()) != null)
+                    if (d.OpenFile() != null)
                     {
                         textBoxCiphertext.Text = File.ReadAllText(d.FileName, Encoding.UTF8);
-                        analyzeData();
+                        analyzeData(true);
                     }
                 }
                 catch (Exception ex)
@@ -44,12 +39,33 @@ namespace Cryptographic_Assistant
 
         private void buttonETAOIN_Click(object sender, EventArgs e)
         {
-
+            textBoxFrequency.Text = "ETAOINSHRDLUCMFWYPVBGKJQXZ";
         }
 
-        private void buttonCustomFrequency_Click(object sender, EventArgs e)
+        private void buttonLoadFrequency_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Define a text file with letter frequencies all on one line.\nMost frequent on the left, least frequent on the right.");
+            OpenFileDialog d = new OpenFileDialog();
+            d.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            if (d.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if (d.OpenFile() != null)
+                    {
+                        textBoxFrequency.Text = File.ReadAllText(d.FileName, Encoding.UTF8).ToUpper();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        }
 
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cryptographic Assistant\nCreated by Michael Hayes\nJanuary 2018");
         }
 
         private void buttonClearCiphertext_Click(object sender, EventArgs e)
@@ -64,10 +80,15 @@ namespace Cryptographic_Assistant
 
         private void buttonCalculatePlaintext_Click(object sender, EventArgs e)
         {
-            analyzeData();
+            analyzeData(true);
         }
 
-        private void analyzeData()
+        private void buttonUpdatePlaintext_Click(object sender, EventArgs e)
+        {
+            analyzeData(false);
+        }
+
+        private void analyzeData(bool findFrequencies)
         {
             if(textBoxCiphertext.Text == "")
             {
@@ -76,13 +97,64 @@ namespace Cryptographic_Assistant
             }
             //a list that contains each letter in ciphertext and its # of occurrences
             //sorted by which occurs most frequently
-            List<KeyValuePair<char, int>> l = parseCiphertext();
-
+            List<KeyValuePair<char, int>> l = new List<KeyValuePair<char, int>>();
+            if (findFrequencies)
+            {
+               l = parseCiphertext();
+            }
+            
             //an array list that specifies which frequency mapping we are using
-            ArrayList a = useEtaoin();
+            ArrayList a = retrieveFrequencies();
+            if(a == null) //if no frequencies were defined
+            {
+                return;
+            }
 
-            //TODO, move through frequency mapping and sorted ciphertext frequencies
-            //to determine the letter mapping
+            SortedDictionary<char, char> charMapping = new SortedDictionary<char, char>();
+
+            //determine the letter mapping
+            for(int i=0; i<26; i++)
+            {
+                if (findFrequencies)
+                {
+                    TextBox t = getTextBoxFromLetter((char)a[i]);
+                    t.Text = l.ElementAt(i).Key.ToString().ToUpper();
+
+                    //cipher text maps to real text
+                    charMapping.Add(l.ElementAt(i).Key, (char)a[i]);
+                }
+                else
+                {
+                    TextBox t = getTextBoxFromLetter((char)a[i]);
+                    t.Text = t.Text.ToUpper();
+
+                    //cipher text maps to real text
+                    try
+                    {
+                        charMapping.Add(t.Text.ElementAt(0), (char)a[i]);
+                    }
+                    catch(Exception x)
+                    {
+                        MessageBox.Show("You have the same ciphertext letter mapped to multiple plaintext letters!\nThis could be due to an incorrect frequency table, or an incorrect letter mapping.\nPlease double check and try again.");
+                    }
+                }
+            }
+            string plaintext = "";
+
+            //decode the mapping
+            foreach(char c in textBoxCiphertext.Text)
+            {
+                if(charMapping.ContainsKey(c))
+                {
+                    plaintext += (charMapping[c].ToString());
+                }
+                else
+                {
+                    plaintext += (c.ToString());
+                }
+            }
+
+            textBoxPlaintext.Text = plaintext;
         }
 
         //function that counts the number of occurrences of letters in a given ciphertext
@@ -130,45 +202,63 @@ namespace Cryptographic_Assistant
                 }
             );
 
-            //but 0 is at the top, so reverse so that the most occurrences at the top
+            //but after sorting by value, 0 is at the top, so reverse so that the letter with most occurrences is at the top
             l.Reverse();
 
             return l;
         }
 
-        private ArrayList useEtaoin()
+        private ArrayList retrieveFrequencies()
         {
-            //etaoin shrdlu cmfwyp vbgkjq xz
+            if(textBoxFrequency.Text == "")
+            {
+                MessageBox.Show("No letter frequency chosen!");
+                return null;
+            }
             ArrayList a = new ArrayList();
-            a.Add('E');
-            a.Add('T');
-            a.Add('A');
-            a.Add('O');
-            a.Add('I');
-            a.Add('N');
-            a.Add('S');
-            a.Add('H');
-            a.Add('R');
-            a.Add('D');
-            a.Add('L');
-            a.Add('U');
-            a.Add('C');
-            a.Add('M');
-            a.Add('F');
-            a.Add('W');
-            a.Add('Y');
-            a.Add('P');
-            a.Add('V');
-            a.Add('B');
-            a.Add('G');
-            a.Add('K');
-            a.Add('J');
-            a.Add('Q');
-            a.Add('X');
-            a.Add('Z');
+            foreach(char c in textBoxFrequency.Text)
+            {
+                if (!a.Contains(c))
+                {
+                    a.Add(c);
+                }
+            }
 
             return a;
         }
 
+        private TextBox getTextBoxFromLetter(char letter)
+        {
+            switch (letter)
+            {
+                case 'E': return textBoxE;
+                case 'T': return textBoxT;
+                case 'A': return textBoxA;
+                case 'O': return textBoxO;
+                case 'I': return textBoxI;
+                case 'N': return textBoxN;
+                case 'S': return textBoxS;
+                case 'H': return textBoxH;
+                case 'R': return textBoxR;
+                case 'D': return textBoxD;
+                case 'L': return textBoxL;
+                case 'U': return textBoxU;
+                case 'C': return textBoxC;
+                case 'M': return textBoxM;
+                case 'F': return textBoxF;
+                case 'W': return textBoxW;
+                case 'Y': return textBoxY;
+                case 'P': return textBoxP;
+                case 'V': return textBoxV;
+                case 'B': return textBoxB;
+                case 'G': return textBoxG;
+                case 'K': return textBoxK;
+                case 'J': return textBoxJ;
+                case 'Q': return textBoxQ;
+                case 'X': return textBoxX;
+                case 'Z': return textBoxZ;
+                default: return null;
+            }
+        }
     }
 }
