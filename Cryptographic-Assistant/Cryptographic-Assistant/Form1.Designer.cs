@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonLoadCiphertext = new System.Windows.Forms.Button();
             this.textBoxCiphertext = new System.Windows.Forms.TextBox();
             this.textBoxPlaintext = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxA = new System.Windows.Forms.TextBox();
             this.textBoxB = new System.Windows.Forms.TextBox();
@@ -91,9 +87,11 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.buttonETAOIN = new System.Windows.Forms.Button();
+            this.buttonCustomFrequency = new System.Windows.Forms.Button();
+            this.buttonClearCiphertext = new System.Windows.Forms.Button();
+            this.buttonClearPlaintext = new System.Windows.Forms.Button();
+            this.buttonCalculatePlaintext = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -115,7 +113,7 @@
             this.textBoxCiphertext.Multiline = true;
             this.textBoxCiphertext.Name = "textBoxCiphertext";
             this.textBoxCiphertext.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxCiphertext.Size = new System.Drawing.Size(1030, 407);
+            this.textBoxCiphertext.Size = new System.Drawing.Size(1191, 407);
             this.textBoxCiphertext.TabIndex = 1;
             // 
             // textBoxPlaintext
@@ -125,7 +123,7 @@
             this.textBoxPlaintext.Multiline = true;
             this.textBoxPlaintext.Name = "textBoxPlaintext";
             this.textBoxPlaintext.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxPlaintext.Size = new System.Drawing.Size(1030, 434);
+            this.textBoxPlaintext.Size = new System.Drawing.Size(1191, 434);
             this.textBoxPlaintext.TabIndex = 2;
             // 
             // label1
@@ -147,23 +145,6 @@
             this.label2.Size = new System.Drawing.Size(148, 33);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ciphertext";
-            // 
-            // chart1
-            // 
-            chartArea1.AlignmentOrientation = System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(1137, 704);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(837, 433);
-            this.chart1.TabIndex = 5;
-            this.chart1.Text = "chart1";
             // 
             // tableLayoutPanel1
             // 
@@ -222,7 +203,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label26, 0, 23);
             this.tableLayoutPanel1.Controls.Add(this.label27, 0, 24);
             this.tableLayoutPanel1.Controls.Add(this.label28, 0, 25);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2059, 100);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1313, 100);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 26;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.846154F));
@@ -700,43 +681,77 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(2019, 46);
+            this.label29.Location = new System.Drawing.Point(1307, 46);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(223, 33);
             this.label29.TabIndex = 7;
             this.label29.Text = "Letter Mappings";
             // 
-            // button1
+            // buttonETAOIN
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1137, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(406, 65);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Use ETAOIN SHRDLU";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonETAOIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonETAOIN.Location = new System.Drawing.Point(395, 46);
+            this.buttonETAOIN.Name = "buttonETAOIN";
+            this.buttonETAOIN.Size = new System.Drawing.Size(406, 65);
+            this.buttonETAOIN.TabIndex = 8;
+            this.buttonETAOIN.Text = "Use ETAOIN SHRDLU";
+            this.buttonETAOIN.UseVisualStyleBackColor = true;
+            this.buttonETAOIN.Click += new System.EventHandler(this.buttonETAOIN_Click);
             // 
-            // button2
+            // buttonCustomFrequency
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1572, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(402, 65);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Custom Letter Frequency";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonCustomFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustomFrequency.Location = new System.Drawing.Point(836, 46);
+            this.buttonCustomFrequency.Name = "buttonCustomFrequency";
+            this.buttonCustomFrequency.Size = new System.Drawing.Size(402, 65);
+            this.buttonCustomFrequency.TabIndex = 9;
+            this.buttonCustomFrequency.Text = "Custom Letter Frequency";
+            this.buttonCustomFrequency.UseVisualStyleBackColor = true;
+            this.buttonCustomFrequency.Click += new System.EventHandler(this.buttonCustomFrequency_Click);
+            // 
+            // buttonClearCiphertext
+            // 
+            this.buttonClearCiphertext.Location = new System.Drawing.Point(258, 151);
+            this.buttonClearCiphertext.Name = "buttonClearCiphertext";
+            this.buttonClearCiphertext.Size = new System.Drawing.Size(102, 52);
+            this.buttonClearCiphertext.TabIndex = 10;
+            this.buttonClearCiphertext.Text = "Clear";
+            this.buttonClearCiphertext.UseVisualStyleBackColor = true;
+            this.buttonClearCiphertext.Click += new System.EventHandler(this.buttonClearCiphertext_Click);
+            // 
+            // buttonClearPlaintext
+            // 
+            this.buttonClearPlaintext.Location = new System.Drawing.Point(258, 642);
+            this.buttonClearPlaintext.Name = "buttonClearPlaintext";
+            this.buttonClearPlaintext.Size = new System.Drawing.Size(102, 50);
+            this.buttonClearPlaintext.TabIndex = 11;
+            this.buttonClearPlaintext.Text = "Clear";
+            this.buttonClearPlaintext.UseVisualStyleBackColor = true;
+            this.buttonClearPlaintext.Click += new System.EventHandler(this.buttonClearPlaintext_Click);
+            // 
+            // buttonCalculatePlaintext
+            // 
+            this.buttonCalculatePlaintext.Location = new System.Drawing.Point(395, 642);
+            this.buttonCalculatePlaintext.Name = "buttonCalculatePlaintext";
+            this.buttonCalculatePlaintext.Size = new System.Drawing.Size(234, 50);
+            this.buttonCalculatePlaintext.TabIndex = 12;
+            this.buttonCalculatePlaintext.Text = "Calculate Plaintext";
+            this.buttonCalculatePlaintext.UseVisualStyleBackColor = true;
+            this.buttonCalculatePlaintext.Click += new System.EventHandler(this.buttonCalculatePlaintext_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(2280, 1185);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1586, 1185);
+            this.Controls.Add(this.buttonCalculatePlaintext);
+            this.Controls.Add(this.buttonClearPlaintext);
+            this.Controls.Add(this.buttonClearCiphertext);
+            this.Controls.Add(this.buttonCustomFrequency);
+            this.Controls.Add(this.buttonETAOIN);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.chart1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPlaintext);
@@ -744,7 +759,6 @@
             this.Controls.Add(this.buttonLoadCiphertext);
             this.Name = "Form1";
             this.Text = "Cryptographic Assistant";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -759,7 +773,6 @@
         private System.Windows.Forms.TextBox textBoxPlaintext;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox textBoxA;
         private System.Windows.Forms.TextBox textBoxB;
@@ -814,8 +827,11 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonETAOIN;
+        private System.Windows.Forms.Button buttonCustomFrequency;
+        private System.Windows.Forms.Button buttonClearCiphertext;
+        private System.Windows.Forms.Button buttonClearPlaintext;
+        private System.Windows.Forms.Button buttonCalculatePlaintext;
     }
 }
 
