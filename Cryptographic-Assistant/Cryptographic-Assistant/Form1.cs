@@ -40,6 +40,7 @@ namespace Cryptographic_Assistant
         private void buttonETAOIN_Click(object sender, EventArgs e)
         {
             textBoxFrequency.Text = "ETAOINSHRDLUCMFWYPVBGKJQXZ";
+            analyzeData(true);
         }
 
         private void buttonLoadFrequency_Click(object sender, EventArgs e)
@@ -61,6 +62,7 @@ namespace Cryptographic_Assistant
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
+            analyzeData(true);
         }
 
         private void buttonAbout_Click(object sender, EventArgs e)
@@ -234,8 +236,15 @@ namespace Cryptographic_Assistant
         {
             if(textBoxFrequency.Text == "")
             {
-                MessageBox.Show("No letter frequency chosen!");
-                return null;
+                DialogResult dialogResult = MessageBox.Show("No letter frequency was specified,\nUse ETAOIN SHRDLU?", "Error - Letter Frequency", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    textBoxFrequency.Text = "ETAOINSHRDLUCMFWYPVBGKJQXZ";
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    return null;
+                }
             }
             ArrayList a = new ArrayList();
             foreach(char c in textBoxFrequency.Text)
