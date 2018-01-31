@@ -817,7 +817,6 @@
             this.Controls.Add(this.textBoxPlaintext);
             this.Controls.Add(this.textBoxCiphertext);
             this.Controls.Add(this.buttonLoadCiphertext);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Cryptographic Assistant";
             this.tableLayoutPanel1.ResumeLayout(false);
