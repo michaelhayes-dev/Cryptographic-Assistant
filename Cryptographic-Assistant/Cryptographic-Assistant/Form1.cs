@@ -8,12 +8,41 @@ using System.Windows.Forms;
 
 namespace Cryptographic_Assistant
 {
-    public partial class Form1 : Form
-    {
-        
+    public partial class Form1 : Form {
+
+        //Holder for the textboxes with their values
+        Dictionary<TextBox, char> textList = new Dictionary<TextBox, char>();
+
+
         public Form1()
         {
             InitializeComponent();
+            //textBoxE.TextAlignChanged += new EventHandler();
+            //textBoxT;
+            //textBoxA;
+            //textBoxO;
+            //textBoxI;
+            //textBoxN;
+            //textBoxS;
+            //textBoxH;
+            //textBoxR;
+            //textBoxD;
+            //textBoxL;
+            //textBoxU;
+            //textBoxC;
+            //textBoxM;
+            //textBoxF;
+            //textBoxW;
+            //textBoxY;
+            //textBoxP;
+            //textBoxV;
+            //textBoxB;
+            //textBoxG;
+            //textBoxK;
+            //textBoxJ;
+            //textBoxQ;
+            //textBoxX;
+            //textBoxZ;
         }
 
         private void buttonLoadCiphertext_Click(object sender, EventArgs e)
@@ -111,6 +140,8 @@ namespace Cryptographic_Assistant
             textBoxFrequency.Text = permuted;
             analyzeData(true);
         }
+
+        //Funtion to swap
 
         private void analyzeData(bool findFrequencies)
         {
@@ -232,6 +263,13 @@ namespace Cryptographic_Assistant
             return l;
         }
 
+        //function to set the chart data
+        private void setChartData(List<KeyValuePair<char, int>> cipherText) {
+            
+        }
+ 
+        
+
         private ArrayList retrieveFrequencies()
         {
             if(textBoxFrequency.Text == "")
@@ -291,5 +329,7 @@ namespace Cryptographic_Assistant
                 default: return null;
             }
         }
+
+       // private void text_boxChanger()
     }
 }

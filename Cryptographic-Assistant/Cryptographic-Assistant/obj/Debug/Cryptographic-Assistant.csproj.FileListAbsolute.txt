@@ -1,0 +1,9 @@
+C:\Users\Lulz\Documents\Git\Crypto\Cryptographic-Assistant\Cryptographic-Assistant\Cryptographic-Assistant\bin\Debug\Cryptographic-Assistant.exe
+C:\Users\Lulz\Documents\Git\Crypto\Cryptographic-Assistant\Cryptographic-Assistant\Cryptographic-Assistant\bin\Debug\Cryptographic-Assistant.pdb
+C:\Users\Lulz\Documents\Git\Crypto\Cryptographic-Assistant\Cryptographic-Assistant\Cryptographic-Assistant\obj\Debug\Cryptographic-Assistant.csprojResolveAssemblyReference.cache
+C:\Users\Lulz\Documents\Git\Crypto\Cryptographic-Assistant\Cryptographic-Assistant\Cryptographic-Assistant\obj\Debug\Cryptographic_Assistant.Form1.resources
+C:\Users\Lulz\Documents\Git\Crypto\Cryptographic-Assistant\Cryptographic-Assistant\Cryptographic-Assistant\obj\Debug\Cryptographic_Assistant.Properties.Resources.resources
+C:\Users\Lulz\Documents\Git\Crypto\Cryptographic-Assistant\Cryptographic-Assistant\Cryptographic-Assistant\obj\Debug\Cryptographic-Assistant.csproj.GenerateResource.Cache
+C:\Users\Lulz\Documents\Git\Crypto\Cryptographic-Assistant\Cryptographic-Assistant\Cryptographic-Assistant\obj\Debug\Cryptographic-Assistant.csproj.CoreCompileInputs.cache
+C:\Users\Lulz\Documents\Git\Crypto\Cryptographic-Assistant\Cryptographic-Assistant\Cryptographic-Assistant\obj\Debug\Cryptographic-Assistant.exe
+C:\Users\Lulz\Documents\Git\Crypto\Cryptographic-Assistant\Cryptographic-Assistant\Cryptographic-Assistant\obj\Debug\Cryptographic-Assistant.pdb
