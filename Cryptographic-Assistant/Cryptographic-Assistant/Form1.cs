@@ -19,7 +19,7 @@ namespace Cryptographic_Assistant
             InitializeComponent();
             //textBoxE.TextAlignChanged += new EventHandler();
             //textBoxT;
-            //textBoxA;
+            textBoxA.TextAlignChanged += new EventHandler();
             //textBoxO;
             //textBoxI;
             //textBoxN;
@@ -91,6 +91,7 @@ namespace Cryptographic_Assistant
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
+            
             analyzeData(true);
         }
 
@@ -330,6 +331,9 @@ namespace Cryptographic_Assistant
             }
         }
 
-       // private void text_boxChanger()
+       private void text_boxChanger()
+        {
+
+        }
     }
 }
