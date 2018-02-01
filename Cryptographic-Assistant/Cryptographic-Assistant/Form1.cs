@@ -11,38 +11,39 @@ namespace Cryptographic_Assistant
     public partial class Form1 : Form {
 
         //Holder for the textboxes with their values
-        Dictionary<TextBox, char> textList = new Dictionary<TextBox, char>();
-
+        Dictionary<string, TextBox> textList = new Dictionary<string, TextBox>();
+        Dictionary<TextBox, string> boxList = new Dictionary<TextBox, string>();
+        bool textChange = true;
 
         public Form1()
         {
             InitializeComponent();
-            //textBoxE.TextAlignChanged += new EventHandler();
-            //textBoxT;
-            textBoxA.TextAlignChanged += new EventHandler();
-            //textBoxO;
-            //textBoxI;
-            //textBoxN;
-            //textBoxS;
-            //textBoxH;
-            //textBoxR;
-            //textBoxD;
-            //textBoxL;
-            //textBoxU;
-            //textBoxC;
-            //textBoxM;
-            //textBoxF;
-            //textBoxW;
-            //textBoxY;
-            //textBoxP;
-            //textBoxV;
-            //textBoxB;
-            //textBoxG;
-            //textBoxK;
-            //textBoxJ;
-            //textBoxQ;
-            //textBoxX;
-            //textBoxZ;
+            textBoxE.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxT.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxA.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxO.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxI.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxN.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxS.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxH.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxR.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxD.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxL.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxU.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxC.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxM.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxF.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxW.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxY.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxP.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxV.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxB.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxG.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxK.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxJ.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxQ.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxX.TextChanged += new EventHandler(this.text_boxChanger);
+            textBoxZ.TextChanged += new EventHandler(this.text_boxChanger);
         }
 
         private void buttonLoadCiphertext_Click(object sender, EventArgs e)
@@ -56,6 +57,9 @@ namespace Cryptographic_Assistant
                     if (d.OpenFile() != null)
                     {
                         textBoxCiphertext.Text = File.ReadAllText(d.FileName, Encoding.UTF8);
+
+                        boxList.Clear();
+                        textList.Clear();
                         analyzeData(true);
                     }
                 }
@@ -69,6 +73,8 @@ namespace Cryptographic_Assistant
         private void buttonETAOIN_Click(object sender, EventArgs e)
         {
             textBoxFrequency.Text = "ETAOINSHRDLUCMFWYPVBGKJQXZ";
+            boxList.Clear();
+            textList.Clear();
             analyzeData(true);
         }
 
@@ -91,7 +97,9 @@ namespace Cryptographic_Assistant
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
-            
+
+            boxList.Clear();
+            textList.Clear();
             analyzeData(true);
         }
 
@@ -117,6 +125,8 @@ namespace Cryptographic_Assistant
 
         private void buttonUpdatePlaintext_Click(object sender, EventArgs e)
         {
+            boxList.Clear();
+            textList.Clear();
             analyzeData(false);
         }
 
@@ -139,6 +149,8 @@ namespace Cryptographic_Assistant
             }
             string permuted = new string(s);
             textBoxFrequency.Text = permuted;
+            boxList.Clear();
+            textList.Clear();
             analyzeData(true);
         }
 
@@ -171,19 +183,23 @@ namespace Cryptographic_Assistant
             //determine the letter mapping
             for(int i=0; i<26; i++)
             {
+                TextBox t = getTextBoxFromLetter((char)a[i]);
                 if (findFrequencies)
                 {
-                    TextBox t = getTextBoxFromLetter((char)a[i]);
+                    textChange = false;
                     t.Text = l.ElementAt(i).Key.ToString().ToUpper();
+                    textList.Add(t.Text, t);
+                    boxList.Add(t, t.Text);
+                    textChange = true;
 
                     //cipher text maps to real text
                     charMapping.Add(l.ElementAt(i).Key, (char)a[i]);
                 }
                 else
                 {
-                    TextBox t = getTextBoxFromLetter((char)a[i]);
+                    textChange = false;
                     t.Text = t.Text.ToUpper();
-
+                    textChange = true;
                     //cipher text maps to real text
                     try
                     {
@@ -193,6 +209,9 @@ namespace Cryptographic_Assistant
                     {
                         MessageBox.Show("You have the same ciphertext letter mapped to multiple plaintext letters!\nThis could be due to an incorrect frequency table, or an incorrect letter mapping.\nPlease double check and try again.");
                     }
+
+                    textList.Add(t.Text, t);
+                    boxList.Add(t, t.Text);
                 }
             }
             string plaintext = "";
@@ -331,9 +350,23 @@ namespace Cryptographic_Assistant
             }
         }
 
-       private void text_boxChanger()
+       private void text_boxChanger(object sender, EventArgs e)
         {
+            TextBox tempBox = (TextBox) sender;
+            if (!textChange) return;
 
+            if (tempBox.Text == "") return;
+
+            string oldVal = boxList[tempBox];
+            TextBox second = textList[tempBox.Text];
+
+            boxList[tempBox] = tempBox.Text;
+            textList[tempBox.Text] = tempBox;
+            boxList[second] = oldVal;
+            textList[oldVal] = second;
+            textChange = false;
+            second.Text = oldVal;
+            textChange = true;
         }
     }
 }
