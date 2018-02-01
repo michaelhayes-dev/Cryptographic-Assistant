@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.buttonLoadCiphertext = new System.Windows.Forms.Button();
             this.textBoxCiphertext = new System.Windows.Forms.TextBox();
             this.textBoxPlaintext = new System.Windows.Forms.TextBox();
@@ -98,9 +97,7 @@
             this.buttonUpdatePlaintext = new System.Windows.Forms.Button();
             this.buttonAbout = new System.Windows.Forms.Button();
             this.buttonPermute = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLoadCiphertext
@@ -866,24 +863,12 @@
             this.buttonPermute.UseVisualStyleBackColor = true;
             this.buttonPermute.Click += new System.EventHandler(this.buttonPermute_Click);
             // 
-            // chart1
-            // 
-            this.chart1.Location = new System.Drawing.Point(833, 75);
-            this.chart1.Name = "chart1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
-            this.chart1.TabIndex = 19;
-            this.chart1.Text = "chart1";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1221, 613);
-            this.Controls.Add(this.chart1);
+            this.ClientSize = new System.Drawing.Size(820, 613);
             this.Controls.Add(this.buttonPermute);
             this.Controls.Add(this.buttonAbout);
             this.Controls.Add(this.buttonUpdatePlaintext);
@@ -907,7 +892,6 @@
             this.Text = "Cryptographic Assistant";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -984,7 +968,6 @@
         private System.Windows.Forms.Button buttonUpdatePlaintext;
         private System.Windows.Forms.Button buttonAbout;
         private System.Windows.Forms.Button buttonPermute;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
