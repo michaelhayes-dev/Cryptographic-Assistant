@@ -80,7 +80,7 @@ namespace Cryptographic_Assistant
 
         private void buttonLoadFrequency_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Define a text file with letter frequencies all on one line.\nMost frequent on the left, least frequent on the right.");
+            MessageBox.Show("Open a file that will be parsed for letter frequencies");
             OpenFileDialog d = new OpenFileDialog();
             d.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             if (d.ShowDialog() == DialogResult.OK)
@@ -89,7 +89,15 @@ namespace Cryptographic_Assistant
                 {
                     if (d.OpenFile() != null)
                     {
-                        textBoxFrequency.Text = File.ReadAllText(d.FileName, Encoding.UTF8).ToUpper();
+                        String s = File.ReadAllText(d.FileName, Encoding.UTF8).ToUpper();
+                        List<KeyValuePair<char, int>> l = new List<KeyValuePair<char, int>>();
+                        l = parseText(s);
+                        String f = "";
+                        for(int i=0; i<26; i++)
+                        {
+                            f += l.ElementAt(i).Key.ToString().ToUpper();
+                        }
+                        textBoxFrequency.Text = f;
                     }
                 }
                 catch (Exception ex)
@@ -168,7 +176,7 @@ namespace Cryptographic_Assistant
             List<KeyValuePair<char, int>> l = new List<KeyValuePair<char, int>>();
             if (findFrequencies)
             {
-               l = parseCiphertext();
+               l = parseText(textBoxCiphertext.Text);
             }
             
             //an array list that specifies which frequency mapping we are using
@@ -233,9 +241,8 @@ namespace Cryptographic_Assistant
         }
 
         //function that counts the number of occurrences of letters in a given ciphertext
-        private List<KeyValuePair<char, int>> parseCiphertext()
+        private List<KeyValuePair<char, int>> parseText(String s)
         {
-            String s = textBoxCiphertext.Text;
             SortedDictionary<char, int> d = new SortedDictionary<char, int>();
 
             //count occurrences of each letter and store in a dictionary

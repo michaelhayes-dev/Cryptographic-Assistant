@@ -104,7 +104,11 @@
             // 
             this.buttonLoadCiphertext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLoadCiphertext.Location = new System.Drawing.Point(23, 24);
+<<<<<<< HEAD
             this.buttonLoadCiphertext.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.buttonLoadCiphertext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.buttonLoadCiphertext.Name = "buttonLoadCiphertext";
             this.buttonLoadCiphertext.Size = new System.Drawing.Size(137, 34);
             this.buttonLoadCiphertext.TabIndex = 0;
@@ -116,7 +120,11 @@
             // 
             this.textBoxCiphertext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCiphertext.Location = new System.Drawing.Point(24, 112);
+<<<<<<< HEAD
             this.textBoxCiphertext.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxCiphertext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxCiphertext.Multiline = true;
             this.textBoxCiphertext.Name = "textBoxCiphertext";
             this.textBoxCiphertext.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -127,7 +135,11 @@
             // 
             this.textBoxPlaintext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPlaintext.Location = new System.Drawing.Point(24, 366);
+<<<<<<< HEAD
             this.textBoxPlaintext.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxPlaintext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxPlaintext.Multiline = true;
             this.textBoxPlaintext.Name = "textBoxPlaintext";
             this.textBoxPlaintext.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -214,7 +226,11 @@
             this.tableLayoutPanel1.Controls.Add(this.label27, 1, 24);
             this.tableLayoutPanel1.Controls.Add(this.label28, 1, 25);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(656, 38);
+<<<<<<< HEAD
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 26;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.846154F));
@@ -249,7 +265,11 @@
             // textBoxB
             // 
             this.textBoxB.Location = new System.Drawing.Point(2, 23);
+<<<<<<< HEAD
             this.textBoxB.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxB.Name = "textBoxB";
             this.textBoxB.Size = new System.Drawing.Size(32, 20);
             this.textBoxB.TabIndex = 1;
@@ -257,7 +277,11 @@
             // textBoxC
             // 
             this.textBoxC.Location = new System.Drawing.Point(2, 44);
+<<<<<<< HEAD
             this.textBoxC.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxC.Name = "textBoxC";
             this.textBoxC.Size = new System.Drawing.Size(32, 20);
             this.textBoxC.TabIndex = 2;
@@ -265,7 +289,11 @@
             // textBoxE
             // 
             this.textBoxE.Location = new System.Drawing.Point(2, 86);
+<<<<<<< HEAD
             this.textBoxE.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxE.Name = "textBoxE";
             this.textBoxE.Size = new System.Drawing.Size(32, 20);
             this.textBoxE.TabIndex = 4;
@@ -273,7 +301,11 @@
             // textBoxF
             // 
             this.textBoxF.Location = new System.Drawing.Point(2, 107);
+<<<<<<< HEAD
             this.textBoxF.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxF.Name = "textBoxF";
             this.textBoxF.Size = new System.Drawing.Size(32, 20);
             this.textBoxF.TabIndex = 5;
@@ -281,7 +313,11 @@
             // textBoxG
             // 
             this.textBoxG.Location = new System.Drawing.Point(2, 128);
+<<<<<<< HEAD
             this.textBoxG.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxG.Name = "textBoxG";
             this.textBoxG.Size = new System.Drawing.Size(32, 20);
             this.textBoxG.TabIndex = 6;
@@ -289,7 +325,11 @@
             // textBoxI
             // 
             this.textBoxI.Location = new System.Drawing.Point(2, 170);
+<<<<<<< HEAD
             this.textBoxI.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxI.Name = "textBoxI";
             this.textBoxI.Size = new System.Drawing.Size(32, 20);
             this.textBoxI.TabIndex = 8;
@@ -297,7 +337,11 @@
             // textBoxM
             // 
             this.textBoxM.Location = new System.Drawing.Point(2, 254);
+<<<<<<< HEAD
             this.textBoxM.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxM.Name = "textBoxM";
             this.textBoxM.Size = new System.Drawing.Size(32, 20);
             this.textBoxM.TabIndex = 12;
@@ -360,7 +404,11 @@
             // textBoxZ
             // 
             this.textBoxZ.Location = new System.Drawing.Point(2, 527);
+<<<<<<< HEAD
             this.textBoxZ.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxZ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxZ.Name = "textBoxZ";
             this.textBoxZ.Size = new System.Drawing.Size(32, 20);
             this.textBoxZ.TabIndex = 25;
@@ -368,7 +416,11 @@
             // textBoxY
             // 
             this.textBoxY.Location = new System.Drawing.Point(2, 506);
+<<<<<<< HEAD
             this.textBoxY.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxY.Name = "textBoxY";
             this.textBoxY.Size = new System.Drawing.Size(32, 20);
             this.textBoxY.TabIndex = 24;
@@ -376,7 +428,11 @@
             // textBoxX
             // 
             this.textBoxX.Location = new System.Drawing.Point(2, 485);
+<<<<<<< HEAD
             this.textBoxX.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxX.Name = "textBoxX";
             this.textBoxX.Size = new System.Drawing.Size(32, 20);
             this.textBoxX.TabIndex = 23;
@@ -384,7 +440,11 @@
             // textBoxW
             // 
             this.textBoxW.Location = new System.Drawing.Point(2, 464);
+<<<<<<< HEAD
             this.textBoxW.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxW.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxW.Name = "textBoxW";
             this.textBoxW.Size = new System.Drawing.Size(32, 20);
             this.textBoxW.TabIndex = 22;
@@ -392,7 +452,11 @@
             // textBoxV
             // 
             this.textBoxV.Location = new System.Drawing.Point(2, 443);
+<<<<<<< HEAD
             this.textBoxV.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxV.Name = "textBoxV";
             this.textBoxV.Size = new System.Drawing.Size(32, 20);
             this.textBoxV.TabIndex = 21;
@@ -400,7 +464,11 @@
             // textBoxU
             // 
             this.textBoxU.Location = new System.Drawing.Point(2, 422);
+<<<<<<< HEAD
             this.textBoxU.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxU.Name = "textBoxU";
             this.textBoxU.Size = new System.Drawing.Size(32, 20);
             this.textBoxU.TabIndex = 20;
@@ -408,7 +476,11 @@
             // textBoxT
             // 
             this.textBoxT.Location = new System.Drawing.Point(2, 401);
+<<<<<<< HEAD
             this.textBoxT.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxT.Name = "textBoxT";
             this.textBoxT.Size = new System.Drawing.Size(32, 20);
             this.textBoxT.TabIndex = 19;
@@ -416,7 +488,11 @@
             // textBoxS
             // 
             this.textBoxS.Location = new System.Drawing.Point(2, 380);
+<<<<<<< HEAD
             this.textBoxS.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxS.Name = "textBoxS";
             this.textBoxS.Size = new System.Drawing.Size(32, 20);
             this.textBoxS.TabIndex = 18;
@@ -424,7 +500,11 @@
             // textBoxR
             // 
             this.textBoxR.Location = new System.Drawing.Point(2, 359);
+<<<<<<< HEAD
             this.textBoxR.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxR.Name = "textBoxR";
             this.textBoxR.Size = new System.Drawing.Size(32, 20);
             this.textBoxR.TabIndex = 17;
@@ -432,7 +512,11 @@
             // textBoxQ
             // 
             this.textBoxQ.Location = new System.Drawing.Point(2, 338);
+<<<<<<< HEAD
             this.textBoxQ.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxQ.Name = "textBoxQ";
             this.textBoxQ.Size = new System.Drawing.Size(32, 20);
             this.textBoxQ.TabIndex = 16;
@@ -440,7 +524,11 @@
             // textBoxP
             // 
             this.textBoxP.Location = new System.Drawing.Point(2, 317);
+<<<<<<< HEAD
             this.textBoxP.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxP.Name = "textBoxP";
             this.textBoxP.Size = new System.Drawing.Size(32, 20);
             this.textBoxP.TabIndex = 15;
@@ -448,7 +536,11 @@
             // textBoxO
             // 
             this.textBoxO.Location = new System.Drawing.Point(2, 296);
+<<<<<<< HEAD
             this.textBoxO.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxO.Name = "textBoxO";
             this.textBoxO.Size = new System.Drawing.Size(32, 20);
             this.textBoxO.TabIndex = 14;
@@ -456,7 +548,11 @@
             // textBoxN
             // 
             this.textBoxN.Location = new System.Drawing.Point(2, 275);
+<<<<<<< HEAD
             this.textBoxN.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxN.Name = "textBoxN";
             this.textBoxN.Size = new System.Drawing.Size(32, 20);
             this.textBoxN.TabIndex = 13;
@@ -475,7 +571,11 @@
             // textBoxA
             // 
             this.textBoxA.Location = new System.Drawing.Point(2, 2);
+<<<<<<< HEAD
             this.textBoxA.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxA.Name = "textBoxA";
             this.textBoxA.Size = new System.Drawing.Size(32, 20);
             this.textBoxA.TabIndex = 0;
@@ -505,7 +605,11 @@
             // textBoxD
             // 
             this.textBoxD.Location = new System.Drawing.Point(2, 65);
+<<<<<<< HEAD
             this.textBoxD.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxD.Name = "textBoxD";
             this.textBoxD.Size = new System.Drawing.Size(32, 20);
             this.textBoxD.TabIndex = 3;
@@ -546,7 +650,11 @@
             // textBoxH
             // 
             this.textBoxH.Location = new System.Drawing.Point(2, 149);
+<<<<<<< HEAD
             this.textBoxH.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxH.Name = "textBoxH";
             this.textBoxH.Size = new System.Drawing.Size(32, 20);
             this.textBoxH.TabIndex = 7;
@@ -565,7 +673,11 @@
             // textBoxJ
             // 
             this.textBoxJ.Location = new System.Drawing.Point(2, 191);
+<<<<<<< HEAD
             this.textBoxJ.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxJ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxJ.Name = "textBoxJ";
             this.textBoxJ.Size = new System.Drawing.Size(32, 20);
             this.textBoxJ.TabIndex = 9;
@@ -573,7 +685,11 @@
             // textBoxK
             // 
             this.textBoxK.Location = new System.Drawing.Point(2, 212);
+<<<<<<< HEAD
             this.textBoxK.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxK.Name = "textBoxK";
             this.textBoxK.Size = new System.Drawing.Size(32, 20);
             this.textBoxK.TabIndex = 10;
@@ -581,7 +697,11 @@
             // textBoxL
             // 
             this.textBoxL.Location = new System.Drawing.Point(2, 233);
+<<<<<<< HEAD
             this.textBoxL.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxL.Name = "textBoxL";
             this.textBoxL.Size = new System.Drawing.Size(32, 20);
             this.textBoxL.TabIndex = 11;
@@ -755,7 +875,11 @@
             // 
             this.buttonETAOIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonETAOIN.Location = new System.Drawing.Point(321, 70);
+<<<<<<< HEAD
             this.buttonETAOIN.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.buttonETAOIN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.buttonETAOIN.Name = "buttonETAOIN";
             this.buttonETAOIN.Size = new System.Drawing.Size(134, 28);
             this.buttonETAOIN.TabIndex = 8;
@@ -766,7 +890,11 @@
             // buttonClearCiphertext
             // 
             this.buttonClearCiphertext.Location = new System.Drawing.Point(129, 79);
+<<<<<<< HEAD
             this.buttonClearCiphertext.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.buttonClearCiphertext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.buttonClearCiphertext.Name = "buttonClearCiphertext";
             this.buttonClearCiphertext.Size = new System.Drawing.Size(51, 27);
             this.buttonClearCiphertext.TabIndex = 10;
@@ -777,7 +905,11 @@
             // buttonClearPlaintext
             // 
             this.buttonClearPlaintext.Location = new System.Drawing.Point(129, 334);
+<<<<<<< HEAD
             this.buttonClearPlaintext.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.buttonClearPlaintext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.buttonClearPlaintext.Name = "buttonClearPlaintext";
             this.buttonClearPlaintext.Size = new System.Drawing.Size(51, 26);
             this.buttonClearPlaintext.TabIndex = 11;
@@ -788,7 +920,11 @@
             // buttonCalculatePlaintext
             // 
             this.buttonCalculatePlaintext.Location = new System.Drawing.Point(198, 334);
+<<<<<<< HEAD
             this.buttonCalculatePlaintext.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.buttonCalculatePlaintext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.buttonCalculatePlaintext.Name = "buttonCalculatePlaintext";
             this.buttonCalculatePlaintext.Size = new System.Drawing.Size(158, 26);
             this.buttonCalculatePlaintext.TabIndex = 12;
@@ -800,7 +936,11 @@
             // 
             this.textBoxFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFrequency.Location = new System.Drawing.Point(321, 38);
+<<<<<<< HEAD
             this.textBoxFrequency.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.textBoxFrequency.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.textBoxFrequency.Name = "textBoxFrequency";
             this.textBoxFrequency.Size = new System.Drawing.Size(300, 23);
             this.textBoxFrequency.TabIndex = 13;
@@ -809,7 +949,11 @@
             // 
             this.buttonLoadFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLoadFrequency.Location = new System.Drawing.Point(464, 70);
+<<<<<<< HEAD
             this.buttonLoadFrequency.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.buttonLoadFrequency.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.buttonLoadFrequency.Name = "buttonLoadFrequency";
             this.buttonLoadFrequency.Size = new System.Drawing.Size(64, 28);
             this.buttonLoadFrequency.TabIndex = 14;
@@ -831,7 +975,11 @@
             // buttonUpdatePlaintext
             // 
             this.buttonUpdatePlaintext.Location = new System.Drawing.Point(374, 334);
+<<<<<<< HEAD
             this.buttonUpdatePlaintext.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.buttonUpdatePlaintext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.buttonUpdatePlaintext.Name = "buttonUpdatePlaintext";
             this.buttonUpdatePlaintext.Size = new System.Drawing.Size(222, 26);
             this.buttonUpdatePlaintext.TabIndex = 16;
@@ -843,7 +991,11 @@
             // 
             this.buttonAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAbout.Location = new System.Drawing.Point(174, 24);
+<<<<<<< HEAD
             this.buttonAbout.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.buttonAbout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.buttonAbout.Name = "buttonAbout";
             this.buttonAbout.Size = new System.Drawing.Size(76, 34);
             this.buttonAbout.TabIndex = 17;
@@ -855,7 +1007,11 @@
             // 
             this.buttonPermute.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPermute.Location = new System.Drawing.Point(538, 70);
+<<<<<<< HEAD
             this.buttonPermute.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.buttonPermute.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.buttonPermute.Name = "buttonPermute";
             this.buttonPermute.Size = new System.Drawing.Size(82, 28);
             this.buttonPermute.TabIndex = 18;
@@ -868,7 +1024,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(820, 613);
+=======
+            this.ClientSize = new System.Drawing.Size(793, 552);
+>>>>>>> master
             this.Controls.Add(this.buttonPermute);
             this.Controls.Add(this.buttonAbout);
             this.Controls.Add(this.buttonUpdatePlaintext);
@@ -886,8 +1046,12 @@
             this.Controls.Add(this.textBoxPlaintext);
             this.Controls.Add(this.textBoxCiphertext);
             this.Controls.Add(this.buttonLoadCiphertext);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> master
             this.Name = "Form1";
             this.Text = "Cryptographic Assistant";
             this.tableLayoutPanel1.ResumeLayout(false);
